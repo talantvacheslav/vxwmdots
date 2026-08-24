@@ -27,9 +27,14 @@ startx
 ```
 
 ## Dependencies
-libx11 libxft libxinerama pywal picom rofi dunst flameshot
 
-kitty fish nemo firefox AyuGram discord 
+base-devel fontconfig freetype2 openssl sqlite \
+libx11 libxinerama libxfixes libxft \
+xorg-server xorg-xinit xorg-xset xorg-xinput xorg-setxkbmap xorg-xrdb \
+xwallpaper xclip xdotool hsetroot \
+picom rofi dunst pywal pywalfox flameshot \
+fish kitty fastfetch neofetch cmatrix lavat eza nemo firefox \
+gnu-free-fonts ttf-jetbrains-mono-nerd
 
 ## Applications binds
 
