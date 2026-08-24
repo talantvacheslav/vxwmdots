@@ -36,6 +36,8 @@ if [ -f "$HOME/wal-dunst.sh" ]; then
     "$HOME/wal-dunst.sh"
 fi
 
-pywalfox update 
+pywalfox update
 
 rm $HOME/.config/Vencord/themes/midnight-pywal.theme.css && ln -s $HOME/.cache/wal/vencord-midnight.css $HOME/.config/Vencord/themes/midnight-pywal.theme.css
+
+spicetify apply

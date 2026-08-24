@@ -20,6 +20,16 @@ cd scripts/
 gcc zixclip.c -o zixclip -lX11 -lXfixes -lsqlite3 -lcrypto
 ```
 
+spicetify setup
+```bash
+curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+#ensure pywal cache exists before linking
+mkdir -p ~/.config/spicetify/Themes/pywal
+ln -sf ~/.cache/wal/spicetify-color.ini ~/.config/spicetify/Themes/pywal/color.ini
+ln -sf ~/.cache/wal/spicetify-user.css ~/.config/spicetify/Themes/pywal/user.css
+spicetify config current_theme pywal color_scheme pywal inject_css 1 replace_colors 1
+spicetify backup apply
+```
 ## Usage
 
 ```bash
@@ -53,5 +63,5 @@ gnu-free-fonts ttf-jetbrains-mono-nerd
 `super+shift+s` flameshot
 
 
-#### see another binds in config.def.h
+#### another binds in config.def.h
 
