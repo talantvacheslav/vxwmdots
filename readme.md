@@ -44,7 +44,8 @@ xorg-server xorg-xinit xorg-xset xorg-xinput xorg-setxkbmap xorg-xrdb \
 xwallpaper xclip xdotool hsetroot \
 picom rofi dunst pywal pywalfox flameshot \
 fish kitty fastfetch neofetch cmatrix lavat eza nemo firefox \
-gnu-free-fonts ttf-jetbrains-mono-nerd
+gnu-free-fonts ttf-jetbrains-mono-nerd \
+discord vencord ayugram spotify 
 
 ## Applications binds
 
