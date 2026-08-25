@@ -40,7 +40,4 @@ pywalfox update
 
 rm $HOME/.config/Vencord/themes/midnight-pywal.theme.css && ln -s $HOME/.cache/wal/vencord-midnight.css $HOME/.config/Vencord/themes/midnight-pywal.theme.css
 
-killall spicetify
-spicetify -s watch &
-
 python ~/vxwmdots/scripts/telegram-theme.py

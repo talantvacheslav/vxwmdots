@@ -63,6 +63,7 @@ static const char *occupiedtags[] = { "1+", "2+", "3+", "4+", "5+", "6+", "7+"};
 static const char *const autostart[] = {
 	"sh", "-c", "~/vxwmdots/scripts/zixclip",
 	"sh", "-c", "~/vxwmdots/scripts/status.sh",
+	"sh", "-c", "~/vxwmdots/scripts/spicetify-watcher.sh",
 	"sh", "-c", "",
 	
 	NULL /* must end with NULL */
