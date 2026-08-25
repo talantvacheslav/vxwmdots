@@ -30,6 +30,17 @@ ln -sf ~/.cache/wal/spicetify-user.css ~/.config/spicetify/Themes/pywal/user.css
 spicetify config current_theme pywal color_scheme pywal inject_css 1 replace_colors 1
 spicetify backup apply
 ```
+
+telegram setup
+```
+edit tdata dir in vxwmdots/scripts/telegram-theme.py if using not ayugram
+launch vxwmdots/scripts/rofi-wallpaper.sh 
+go to telegram
+press «settings» -> «chat settings»
+press 3 points right-upper -> «create new theme» -> «import existing theme»
+select pywal.tdesktop-theme in tdata dir
+press «keep changes» and «cancel»
+```
 ## Usage
 
 ```bash

@@ -42,3 +42,5 @@ rm $HOME/.config/Vencord/themes/midnight-pywal.theme.css && ln -s $HOME/.cache/w
 
 killall spicetify
 spicetify -s watch &
+
+python ~/vxwmdots/scripts/telegram-theme.py
