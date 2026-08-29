@@ -255,7 +255,7 @@ static int do_list(void) {
     
     sqlite3_stmt *stmt;
     sqlite3_prepare_v2(db,
-        "SELECT id, type, preview FROM clips ORDER BY created DESC LIMIT 100",
+        "SELECT id, type, preview FROM clips ORDER BY created DESC",
         -1, &stmt, NULL);
     
     while (sqlite3_step(stmt) == SQLITE_ROW) {
