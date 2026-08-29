@@ -122,7 +122,10 @@ static const char *screenshotcmd[]  = { "sh", "-c", "flameshot gui -r -p $HOME/s
 static const char *rofiwallpaper[] = { "sh", "-c", "~/vxwmdots/scripts/rofi-wallpaper.sh"};
 static const char *walr[] = {"sh", "-c", "wal -R"};
 
-
+#define musicbuttons 1 
+static const char *m_playpause[] = {"sh", "-c", "playerctl play-pause "};
+static const char *m_next[] = {"sh", "-c", "playerctl next"};
+static const char *m_prev[] = {"sh", "-c", "playerctl previous"};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -166,7 +169,11 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 
-
+#if musicbuttons
+	{ MODKEY|ShiftMask,		XK_z,      spawn,	   {.v = m_prev } },
+	{ MODKEY|ShiftMask,		XK_x,      spawn,	   {.v = m_playpause } },
+	{ MODKEY|ShiftMask,		XK_c,      spawn,	   {.v = m_next } },
+#endif
 #if FULLSCREEN
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 #endif
