@@ -21,22 +21,18 @@ fi
 
 WALLPAPER="$WALL_DIR/$SELECTION"
 
-xwallpaper --stretch "$WALLPAPER"
+wal -i "$WALLPAPER" -nq
 
-wal -i "$WALLPAPER" -n
-
-#comment if dont want 
 hsetroot -solid "$(sed -n 's/^dwm\.selbgcolor:[[:space:]]*//p' ~/.cache/wal/dwm.Xresources)"
 
 xrdb -merge "$HOME/.cache/wal/colors.Xresources"
 
+kill $(pgrep dunst)
+dunst &
+
 xdotool key Super+F5
 
-if [ -f "$HOME/wal-dunst.sh" ]; then
-    "$HOME/wal-dunst.sh"
-fi
-
-pywalfox update
+pywalfox update && echo "1"
 
 rm $HOME/.config/Vencord/themes/midnight-pywal.theme.css && ln -s $HOME/.cache/wal/vencord-midnight.css $HOME/.config/Vencord/themes/midnight-pywal.theme.css
 

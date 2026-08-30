@@ -1,0 +1,56 @@
+[global]
+monitor = 0
+follow = mouse
+
+width = (400, 400)
+height = (0, 300)
+origin = top-right
+offset = (0, 0)
+scale = 0
+
+
+font = Monospace 10
+line_height = 3
+padding = 12
+horizontal_padding = 12
+text_icon_padding = 10
+frame_width = 2
+frame_color = "{background}"
+separator_height = 2
+separator_color = frame
+corner_radius = 10
+
+
+idle_threshold = 120
+timeout = 0
+markup = full
+format = "<b>%s</b>\n%b"
+
+
+icon_position = left
+icon_theme = Papirus
+max_icon_size = 64
+
+
+history_length = 50
+show_indicators = yes
+sticky_history = yes
+word_wrap = yes
+ellipsize = end
+
+
+progress_bar = true
+progress_bar_height = 6
+progress_bar_frame_width = 0
+progress_bar_min_width = 150
+progress_bar_max_width = 300
+
+### Mouse
+mouse_left_click = do_action
+mouse_middle_click = close_all
+mouse_right_click = close_current
+
+[urgency_normal]
+background = "{color6}"  
+foreground = "{background}" 
+timeout = 10
