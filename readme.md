@@ -11,6 +11,9 @@ cd vxwmdots/
 cp -rf config/* ~/.config/
 cp -rf xinitrc ~/.xinitrc
 
+mkdir -p ~/.config/dunst
+ln -sf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
+
 cd vxwm/
 make 
 sudo make install
