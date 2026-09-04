@@ -22,7 +22,7 @@ Even though this sounds complex, it is actually pretty lightweight, and is very 
  
  */
 #define IT_SHOW_COORDINATES_IN_BAR 0 // Shows your coordinates in the bar, pretty impossible to use infinite tags without this.
-#define ZOOM 1 // Zoom integration, requires vcompmgr installed and running.
+#define ZOOM 0 // Zoom integration, requires vcompmgr installed and running.
 
 
 /* Move/Resize */

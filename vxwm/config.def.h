@@ -97,6 +97,8 @@ static const Layout layouts[] = {
 #define MODKEY Mod4Mask
 #define ALTERNATE_MODKEY Mod1Mask
 
+#define SCROLL_UP Button4
+#define SCROLL_DOWN Button5
 	
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -126,6 +128,12 @@ static const char *walr[] = {"sh", "-c", "wal -R"};
 static const char *m_playpause[] = {"sh", "-c", "playerctl play-pause "};
 static const char *m_next[] = {"sh", "-c", "playerctl next"};
 static const char *m_prev[] = {"sh", "-c", "playerctl previous"};
+
+#if ZOOM
+static const char *zoomin[] = { "vcompmgr", "-Z", "+0.15", NULL }; // zoom in
+static const char *zoomout[] = { "vcompmgr", "-Z", "-0.15", NULL }; // zoom out
+static const char *zoomreset[] = { "vcompmgr", "-Z", "1", NULL }; // set zoom to 1
+#endif
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -216,6 +224,13 @@ static const Button buttons[] = {
 	  /* .f = 1 is moving multiplier, for example if set to 0.5, canvas will move 2 times slower, if set to 2, canvas will move 2 times faster. 
 	     If you want inverted canvas move then set the value to a negative value. */
 
+#endif
+#if ZOOM
+  { ClkRootWin,           MODKEY,         SCROLL_UP,      spawn,          {.v = zoomin } },
+  { ClkRootWin,           MODKEY,         SCROLL_DOWN,    spawn,          {.v = zoomout } },
+
+  { ClkClientWin,         MODKEY,         SCROLL_UP,      spawn,          {.v = zoomin } },
+  { ClkClientWin,         MODKEY,         SCROLL_DOWN,    spawn,          {.v = zoomout } },
 #endif
 
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
