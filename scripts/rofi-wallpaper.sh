@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#script and rofi config is fork from https://github.com/NyxOkkotsu/vxwmdotfiles
-
 WALL_DIR="$HOME/Pictures/Wallpapers"
 
 mkdir -p "$WALL_DIR"
@@ -32,7 +30,7 @@ dunst &
 
 xdotool key Super+F5
 
-pywalfox update && echo "1"
+$HOME/.local/bin/pywalfox update
 
 rm $HOME/.config/Vencord/themes/midnight-pywal.theme.css && ln -s $HOME/.cache/wal/vencord-midnight.css $HOME/.config/Vencord/themes/midnight-pywal.theme.css
 
