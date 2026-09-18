@@ -20,5 +20,5 @@ alias q="printf '\033[2J\033[3J\033[1;1H'"
 alias n='neofetch'
 alias x='startx'
 alias cma='cmatrix -rmu 6'
-alias ls='eza --icons'
+alias ls='eza'
 end
