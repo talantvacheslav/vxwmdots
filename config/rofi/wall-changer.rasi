@@ -3,123 +3,51 @@
 configuration {
     modi:                        "dmenu";
     show-icons:                  true;
-    dmenu-display-format:        "{name}";
     icon-theme:                  "Papirus";
 }
-
 window {
     transparency:                "real";
-    location:                    center;
-    anchor:                      center;
-    fullscreen:                  false;
-    width:                       750px;
-
+    width:                       1250px;
     enabled:                     true;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      2px solid;
-    border-radius:               10px;
+    border:                      3px solid;
     border-color:                @selected-active-background;
     background-color:            @background;
-    cursor:                      "default";
 }
-
 mainbox {
     enabled:                     true;
-    spacing:                     10px;
-    padding:                     20px;
     background-color:            transparent;
-    children:                    [ "inputbar", "listview" ];
+    children:                    [ "listview" ];
 }
-
-/* --- Input Bar / Search Bar --- */
-inputbar {
-    enabled:                     true;
-    spacing:                     10px;
-    padding:                     10px;
-    border:                      0px 0px 1px 0px solid;
-    border-color:                @selected-active-background;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    children:                    [ "prompt", "entry" ];
-}
-
-prompt {
-    enabled:                     true;
-    background-color:            transparent;
-    text-color:                  @selected-active-background;
-    font:                        "monospace bold 10";
-}
-
-entry {
-    enabled:                     true;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    cursor:                      "text";
-    placeholder:                 "Search wallpaper...";
-    placeholder-color:           @alternate-active-background;
-    font:                        "monospace 10";
-}
-
-/* --- List View / Wallpaper Grid Layout --- */
 listview {
     enabled:                     true;
-    columns:                     3;    /* Divided into 3 horizontal columns */
-    lines:                       2;    /* Displays 2 rows vertically before scrolling */
+    columns:                     5;
+    lines:                       3;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   false;
     layout:                      vertical;
-    reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
-    spacing:                     15px;
-    margin:                      5px 0px 0px 0px;
-    padding:                     0px;
+    margin:                      0px 0px 0px 0px;
     background-color:            transparent;
 }
-
-/* --- Individual Grid Element --- */
 element {
     enabled:                     true;
-    spacing:                     8px;
-    padding:                     10px;
-    border:                      1px solid;
-    border-radius:               6px;
-    border-color:                transparent;
     background-color:            transparent;
-    text-color:                  @foreground;
-    orientation:                 vertical;  /* Preview image on top, text below */
-    cursor:                      "pointer";
+    orientation:                 vertical;
+    children:                    [ element-icon ];
 }
 
 element normal.normal {
     background-color:            transparent;
-    text-color:                  @foreground;
 }
 
 element selected.normal {
     background-color:            @selected-active-background;
-    text-color:                  @background;
     border-color:                @selected-active-background;
 }
-
-/* --- Wallpaper Preview Sizing --- */
 element-icon {
     background-color:            transparent;
-    text-color:                  inherit;
-    size:                        120px;     /* Square size for the image preview */
-    cursor:                      inherit;
+    size:                        150px;
     horizontal-align:            0.5;
-}
-
-element-text {
-    background-color:            transparent;
-    text-color:                  inherit;
-    highlight:                   inherit;
-    cursor:                      inherit;
     vertical-align:              0.5;
-    horizontal-align:            0.5;
-    font:                        "monospace 9";
 }
