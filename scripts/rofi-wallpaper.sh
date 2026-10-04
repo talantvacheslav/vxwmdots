@@ -32,8 +32,8 @@ xdotool key Super+F5
 
 $HOME/.local/bin/pywalfox update
 
-rm $HOME/.config/Vencord/themes/midnight-pywal.theme.css && ln -s $HOME/.cache/wal/vencord-midnight.css $HOME/.config/Vencord/themes/midnight-pywal.theme.css
-rm $HOME/.config/gtk-3.0/gtk.css && ln -sf $HOME/.cache/wal/gtk.css $HOME/.config/gtk-3.0/gtk.css
-rm $HOME/.config/dunst/dunstrc && ln -sf $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
+ln -sf $HOME/.cache/wal/vencord-midnight.css $HOME/.config/Vencord/themes/midnight-pywal.theme.css
+ln -sf $HOME/.cache/wal/gtk.css $HOME/.config/gtk-3.0/gtk.css
+ln -sf $HOME/.cache/wal/dunstrc $HOME/.config/dunst/dunstrc
 
 python ~/vxwmdots/scripts/telegram-theme.py
