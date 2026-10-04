@@ -5,14 +5,12 @@
 ## Installation
 
 ```bash
+#install dependencies before this
 git clone https://github.com/talantvacheslav/vxwmdots.git
 cd vxwmdots/
 
 cp -rf config/* ~/.config/
 cp -rf xinitrc ~/.xinitrc
-
-mkdir -p ~/.config/dunst
-ln -sf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
 
 cd vxwm/
 make 
@@ -21,6 +19,10 @@ sudo make install
 cd ..
 cd scripts/
 gcc zixclip.c -o zixclip -lX11 -lXfixes -lsqlite3 -lcrypto
+
+mkdir -p ~/.config/gtk-3.0
+mkdir -p ~/.config/dunst
+./rofi-wallpaper.sh
 ```
 
 spicetify setup
@@ -44,6 +46,12 @@ press 3 points right-upper -> «create new theme» -> «import existing theme»
 select pywal.tdesktop-theme in tdata dir
 press «keep changes» and «cancel»
 ```
+
+discord(vencord) setup
+```bash 
+sh -c "$(curl -sS https://vencord.dev/install.sh)"
+```
+
 ## Usage
 
 ```bash
@@ -59,7 +67,6 @@ xwallpaper xclip xdotool hsetroot \
 picom rofi dunst pywal pywalfox flameshot \
 fish kitty fastfetch neofetch cmatrix lavat eza nemo firefox \
 gnu-free-fonts ttf-jetbrains-mono-nerd \
-discord vencord ayugram spotify 
 
 ## Applications binds
 
@@ -80,3 +87,5 @@ discord vencord ayugram spotify
 
 #### another binds in config.def.h
 
+## Notes 
+flameshot might not work on versions 13 and higher, you can downgrade it to 12.1 or lower to make it work
