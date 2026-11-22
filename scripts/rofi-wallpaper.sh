@@ -21,8 +21,8 @@ WALLPAPER="$WALL_DIR/$SELECTION"
 
 wal -i "$WALLPAPER" -nq
 
-hsetroot -solid "$(sed -n 's/^dwm\.selbgcolor:[[:space:]]*//p' ~/.cache/wal/dwm.Xresources)"
-
+hsetroot -solid "$(sed -n 's/^dwm\.normbgcolor:[[:space:]]*//p' ~/.cache/wal/dwm.Xresources)" &
+c.
 xrdb -merge "$HOME/.cache/wal/colors.Xresources"
 
 kill $(pgrep dunst)
